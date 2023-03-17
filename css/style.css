@@ -42,7 +42,7 @@ h1 {
     margin: auto;
     padding: 1rem 0;
   }
-  .card {
+  /* .card {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -53,6 +53,11 @@ h1 {
     border-radius: 10px;
     margin: auto;
     overflow: hidden;
+  } */
+  .card{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
   }
   .card--avatar {
     width: 100%;
