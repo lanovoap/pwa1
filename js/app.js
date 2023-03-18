@@ -25,11 +25,17 @@ const showCoffees = () => {
   coffees.forEach(
     ({ name, image }) =>
       (output += `
-              <div class="card">
-                <img class="card--avatar" src=${image} />
-                <h1 class="card--title">${name}</h1>
-                <a class="card--link" href="#">Taste</a>
-              </div>
+              <div class="row">
+              <div class="col">
+                <div class="card text-center">
+                  <img src="${image}" class="card-img-top" alt="..."  width="50" height="300">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>${name}</b></h5>
+                    <p class="card-text">Taste</p>
+                  </div>
+                </div>
+              </div>  
+            </div> 
               `)
   )
   container.innerHTML = output
