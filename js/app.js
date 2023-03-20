@@ -1,5 +1,5 @@
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
+  window.addEventListener("load", function () {
     navigator.serviceWorker
       .register("/serviceWorker.js")
       .then(res => console.log("service worker registered"))
@@ -21,17 +21,22 @@ const coffees = [
 ]
 
 const showCoffees = () => {
-  let output = ""
+  let output = "<div class='row text-center'>"
   coffees.forEach(
     ({ name, image }) =>
-      (output += `
-              <div class="card">
-                <img class="card--avatar" src=${image} />
-                <h1 class="card--title">${name}</h1>
-                <a class="card--link" href="#">Taste</a>
+    (output += `
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card flex-fill m-2 shadow mb-5 bg-body rounded" >
+                  <img class="card-img-top object-fit-cover" src=${image} />
+                  <div class="card-body">
+                  <h1 class="card-title mt-1">${name}</h1>
+                  <a class="card-link px-3 py-1 rounded-4" href="#">Taste</a>
+                  </div>
+                </div>
               </div>
               `)
   )
+  output += "</div>\n"
   container.innerHTML = output
 }
 
