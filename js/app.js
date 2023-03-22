@@ -25,7 +25,7 @@ const showCoffees = () => {
   coffees.forEach(
     ({ name, image }) =>
       (output += `
-              <div class="card">
+              <div class="card-body"> 
                 <img class="card--avatar" src=${image} />
                 <h1 class="card--title">${name}</h1>
                 <a class="card--link" href="#">Taste</a>
@@ -36,3 +36,4 @@ const showCoffees = () => {
 }
 
 document.addEventListener("DOMContentLoaded", showCoffees)
+//se agrego card body al div para dejar un solo tamaño de card
